@@ -403,7 +403,7 @@
 
   \begin{center}
     \fmfont
-    \@title\par
+    \Large\@title\fmfont\par
     \vspace{14pt minus 4pt}
     by \par
     {\@author}\par
@@ -534,7 +534,7 @@ by\par
     \setlength{\parskip}{\baselineskip}
     \setcounter{page}{1}
     \begin{center}
-      \abstractname \par
+      \large \textbf{\abstractname} \fmfont \par
       \@title\par
       by\par
       \@author\par
