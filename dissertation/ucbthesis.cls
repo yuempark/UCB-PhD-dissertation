@@ -311,7 +311,8 @@
 % supporting the title and approval pages.
 %
 
-% acknowledge environment:
+% introduction and acknowledge environments:
+\newcommand\introductionname{Introduction}
 \newcommand\acknowledgename{Acknowledgments}
 
 %    ****************************************
@@ -574,6 +575,19 @@ by\par
 \newenvironment{dedication}
   {\begin{alwayssingle}}
   {\end{alwayssingle}}
+
+% INTRODUCTION
+%
+% The introduction environment puts a large, bold, centered
+% "Introduction" label at the top of the page.
+
+\newenvironment{introduction}
+{\begin{alwayssingle}
+  \begin{center}
+  {\large \bfseries \introductionname}
+  \end{center}
+}
+{\end{alwayssingle}}
 
 % ACKNOWLEDGEMENTS
 %
