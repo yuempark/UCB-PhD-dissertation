@@ -2,6 +2,10 @@
 % dissertation formatting can be found here:
 % https://grad.berkeley.edu/academic-progress/dissertation/
 
+%%%%%%%%%%%%%%%%%%%%
+%%%%% PACKAGES %%%%%
+%%%%%%%%%%%%%%%%%%%%
+
 \documentclass{ucbthesis}
 %\usepackage{biblatex}
 \usepackage{natbib} % use natbib over biblatex to be able to use GSAB .bst
@@ -14,6 +18,8 @@
 \urlstyle{same}
 \usepackage{threeparttable}
 \usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption} % change figure caption style
+\usepackage{bibentry}
+\bibliographystyle{gsabull}
 
 % To compile this file, run "latex thesis", then "biber thesis"
 % (or "bibtex thesis", if the output from latex asks for that instead),
@@ -35,9 +41,11 @@
 % set hyphenation rules if words are not hyphenated properly
 %\hyphenation{mar-gin-al-ia}
 
+%%%%%%%%%%%%%%%%%%%
+%%%%% SYMBOLS %%%%%
+%%%%%%%%%%%%%%%%%%%
 
-% SYMBOLS
-\newcommand{\degC}{$^{\circ}$C\xspace}
+\newcommand{\degreesC}{$^{\circ}$C\xspace}
 \newcommand{\degrees}{$^{\circ}$\xspace}
 \newcommand{\dC}{$\delta^{13}$C\xspace}
 \newcommand{\dO}{$\delta^{18}$O\xspace}
@@ -47,10 +55,15 @@
 \newcommand{\UPb}{$^{206}$Pb/$^{238}$U\xspace}
 \newcommand{\pCOtwo}{$p$CO$_{2}$\xspace}
 \newcommand{\COtwo}{CO$_{2}$\xspace}
+\newcommand{\SI}{\textit{Supporting Information}\xspace}
+\newcommand{\MM}{\textit{Materials and Methods}\xspace}
 
 \begin{document}
+\nobibliography* % enigmatically required to use bibentry
 
-% Declarations for Front Matter
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% FRONT MATTER %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Planetary cooling, tectonics, and weathering from 1 billion years ago to the present}
 
@@ -79,27 +92,56 @@
 
 \begin{frontmatter}
 
-% You can delete the \clearpage lines if you don't want these to start on
-% separate pages.
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% TOC AND LISTS %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \tableofcontents
 \clearpage
 \listoffigures
 \clearpage
 \listoftables
 
-\begin{introduction}
+%%%%%%%%%%%%%%%%%%%
+%%%%% PREFACE %%%%%
+%%%%%%%%%%%%%%%%%%%
+
+\begin{preface}
 \phantomsection % make the ToC links work
-\addcontentsline{toc}{chapter}{Introduction} % add to ToC
-Bovinely invasive brag; cerulean forebearance.
-Washable an acre. To canned, silence in foreign.
-Be a popularly. A as midnight transcript alike.
-To by recollection bleeding. That calf are infant. In clause.
-Buckaroo loquaciousness?  Aristotelian!
-Masterpiece as devoted. My primal the narcotic. For cine?
-In the glitter. For so talented. Which is confines cocoa accomplished.
-Or obstructive, or purposeful.
-And exposition? Of go. No upstairs do fingering.
-\end{introduction}
+\addcontentsline{toc}{chapter}{Preface} % add to ToC
+
+The material within the chapters of this dissertation are largely taken from previously published (or soon to be published) articles. The following text identifies these articles, and provides some additional context about their inception.
+
+\subsubsection*{Chapter 1 - Evaluating the relationship between the area and latitude of large igneous provinces and Earth's long-term climate state}
+
+\noindent
+\bibentry{Macdonald2019a}
+
+\medskip
+
+\noindent
+\bibentry{Park2019a}
+
+\medskip
+
+In \citet{Macdonald2019a}, we developed a workflow built on pyGPlates (software for the analysis of paleogeographic models) that allowed us to calculate the area/length of paleogeographically reconstructed polygons/lines within different latitude bands through time. By pairing this workflow with a database of ophiolite-bearing sutures and a paleogeographic model, we were able to identify a strong correlation between arc-continent collisions in the tropics (measured as active suture length in the tropics) and times of glacial climate over the past $\sim$520~m.y. This correlation led to our proposal that Earth's climate state is set primarily by global weatherability, which changes with the latitudinal distribution of arc-continent collisions. Similarly, it has been proposed elsewhere that the eruption/drift of large igneous provinces into the tropics has driven global cooling. The pyGPlates workflow that we developed provided a means through which we could evaluate this hypothesis. \citet{Park2019a} builds upon the zonal large igneous province area analysis presented in the supplementary materials for \citet{Macdonald2019a} by more rigorously developing parameterizations of large igneous province erosion and exploring several geologically reasonable large igneous province post-emplacement scenarios.
+
+\citet{Park2019a} is currently available as a preprint on EarthArXiv, but a slightly modified version of the article is scheduled to be published within 2020 as Chapter 7 within AGU Geophysical Monograph Series 255, titled \textit{Large Igneous Provinces: A Driver of Global Environmental and Biotic Changes}, edited by Richard E. Ernst, Alexander J. Dickson, and Andrey Bekker.
+
+\subsubsection*{Chapter 2 - Emergence of the Southeast Asian islands as a driver for Neogene cooling}
+
+\noindent
+\bibentry{Park2020b}
+
+\medskip
+
+xxx
+
+\end{preface}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ACKNOWLEDGEMENTS %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{acknowledgements}
 \phantomsection % make the ToC links work
@@ -117,17 +159,28 @@ And exposition? Of go. No upstairs do fingering.
 
 \end{frontmatter}
 
+%%%%%%%%%%%%%%%%%%%%
+%%%%% CHAPTERS %%%%%
+%%%%%%%%%%%%%%%%%%%%
+
 \pagestyle{headings}
 
 % (Optional) \part{First Part}
 
 \include{chap-LIPs}
-\include{chap-SEAI}
+\include{chap-SEAIs}
 
-\bibliographystyle{gsabull}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% BIBLIOGRAPHY %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
 \bibliography{references}
 
-% \appendix
-% \chapter{More Monticello Candidates}
+%%%%%%%%%%%%%%%%%%%%
+%%%%% APPENDIX %%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\include{SI-SEAIs}
 
 \end{document}
