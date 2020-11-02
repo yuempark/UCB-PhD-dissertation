@@ -18,6 +18,7 @@
 \urlstyle{same}
 \usepackage{threeparttable}
 \usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption} % change figure caption style
+\usepackage{color,colortbl}
 \usepackage{bibentry}
 \bibliographystyle{gsabull}
 
@@ -58,12 +59,14 @@
 \newcommand{\SI}{\textit{Supporting Information}\xspace}
 \newcommand{\MM}{\textit{Materials and Methods}\xspace}
 
-\begin{document}
-\nobibliography* % enigmatically required to use bibentry
+\definecolor{Yellow}{rgb}{1,1,0.35}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% FRONT MATTER %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\nobibliography* % enigmatically required to use bibentry
 
 \title{Planetary cooling, tectonics, and weathering from 1 billion years ago to the present}
 
@@ -183,5 +186,6 @@ And exposition? Of go. No upstairs do fingering.
 
 \appendix
 \include{SI-SEAIs}
+\include{SI-Tambien}
 
 \end{document}
