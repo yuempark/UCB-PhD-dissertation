@@ -119,13 +119,13 @@ We compute spatially-resolved long-term \COtwo consumption (i.e. Ca+Mg fluxes) u
 
 \begin{equation*}
     r^{2} = 1 - \frac{\sum\left[ \log_{10}(M_{i}) - \log_{10}(O_{i}) \right]^{2}}{\sum\left[ \log_{10}(O_{i}) - \overline{\log_{10}(O)} \right]^{2}}
-    \label{eq:10}
+    \label{eq:999}
 \end{equation*}
 
 \noindent
 $M_{i}$ is the modeled \COtwo consumption over watershed $i$, $O_{i}$ is the observed \COtwo consumption over watershed $i$, and $\overline{\log_{10}(O)}$ is the mean of the log of observed \COtwo consumption over all watersheds.
 
-The majority of the original 93,600 parameter combinations produce \COtwo consumption maps with poor fits to the measured watershed data (Fig. \ref{fig:W-vs-r2}). Given that the coefficient of determination ($r^{2}$) is calculated using Equation \ref{eq:10} rather than fitting a linear model, many of the combinations associated with particularly poor fits result in negative $r^{2}$ values (Fig. \ref{fig:W-vs-r2}). However, given the right permutation of parameters, GEOCLIM produces \COtwo consumption maps that fit the measured watershed data reasonably well. We eliminate all parameter combinations that produce a $r^{2}\leq0.5$, which leaves 573 unique parameter combinations (Figs. \ref{fig:W-vs-r2} and \ref{fig:r2-cross-plot}).
+The majority of the original 93,600 parameter combinations produce \COtwo consumption maps with poor fits to the measured watershed data (Fig. \ref{fig:W-vs-r2}). Given that the coefficient of determination ($r^{2}$) is calculated using Equation \ref{eq:999} rather than fitting a linear model, many of the combinations associated with particularly poor fits result in negative $r^{2}$ values (Fig. \ref{fig:W-vs-r2}). However, given the right permutation of parameters, GEOCLIM produces \COtwo consumption maps that fit the measured watershed data reasonably well. We eliminate all parameter combinations that produce a $r^{2}\leq0.5$, which leaves 573 unique parameter combinations (Figs. \ref{fig:W-vs-r2} and \ref{fig:r2-cross-plot}).
 
 Global CO$_{2}$ consumption calculated from these 573 parameter combinations ranges from 3.7$\times10^{12}$~mol/yr to 6.3$\times10^{12}$~mol/yr, with a mean of 5.2$\times10^{12}$~mol/yr. These estimates fall within the range of independently estimated outgassing rates for the present-day: the full range of estimates of the present-day non-anthropogenic global CO$_{2}$ emission rate compiled in \citet{Gerlach2011a} is 3.0--10.0$\times10^{12}$~mol/yr, with the preferred range of those estimates being 3.4--5.9$\times10^{12}$~mol/yr (Fig. \ref{fig:W-vs-r2}B).
 
